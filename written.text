@@ -1,0 +1,45 @@
+Case 1: 0 0
+Test a square in the corner to see if mines_in_vicnity works with edge cases
+If it works, function should only count mines in 0 1, 1 1, 1 0 and nothing
+outside of that (ex: 0 -1)
+
+Case 2: 8 9
+Test a square out of bounds to see if valid_input works 
+Output should be: Bad input. Row and col must be >= 0 and < 9.
+
+Case 3: 0 3
+Test a square on the border to see if mines_in_vicnity works with edge cases
+Similar to case 1, if the function works, only mines in 0 2, 0 4, 1 2-4
+should be counted
+
+Case 4: 5 5
+Test a square with row and column of the same number
+Output should be the same as a normal square
+
+Case 5: 6 7
+Test a random square without any special qualities
+Output should be as expected, with any mines in 8 surrounding squares
+printed after the square in revealed - AS LONG AS THE SQUARE DOES NOT
+CONTAIN A MINE
+
+Case 6 + 7: SPECIAL - TEST WIN/ LOSE USING 3X3 BOARD AND RANDOMSEED = 1
+In this situation, the mine should be at 1 0
+
+Case 6: 1 0
+This square is a mine, so the game over message and board should be printed
+and the game should end
+
+Case 7: All but 1 0
+In this case, the player would win - the you win message should be printed
+and the game should end 
+
+EXTRA CREDIT:
+I chose the option where the user gives up. I allowed the user to enter -0
+if they want to give up. 
+For the program to read -0 separate of the other 2 integers, I had to
+read in each integer one at a time instead of reading both.
+I also changed my print_game_over function. Initally, the function also
+printed out the line "GAME OVER. YOU LOST!" but I changed it so that it
+doesn't print out that line. This is so that I can use that function to
+update and print out the board with mines, and can add "YOU GAVE UP!"
+separately of the function.
